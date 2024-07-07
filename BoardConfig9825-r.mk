@@ -35,7 +35,7 @@ BOARD_DTB_CFG := $(COMMON_PATH)/configs/kernel/exynos9825-r.cfg
 BOARD_BOOTIMAGE_PARTITION_SIZE := 61865984
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 71102464
 
-$(call soong_config_set,fstab.exynos9820,has_metadata_partition,true)
+$(call soong_config_set,fstab_exynos9820,has_metadata_partition,true)
 
 ## Platform
 DEVICE_MANIFEST_FILE += $(COMMON_PATH)/exynos9825_manifest.xml
@@ -49,7 +49,7 @@ TARGET_VENDOR_PROP += $(COMMON_PATH)/vendor.exynos9825.prop
 TARGET_RECOVERY_FSTAB_GENRULE := gen_fstab.exynos9820
 
 ## Security
-VENDOR_SECURITY_PATCH := 2024-01-01
+VENDOR_SECURITY_PATCH := 2024-05-01
 
 ## Verified Boot
 BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --flags 0
