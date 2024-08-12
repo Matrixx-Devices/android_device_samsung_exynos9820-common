@@ -117,6 +117,7 @@ TARGET_KEYMASTER_VARIANT := samsung
 # HIDL
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
     $(COMMON_PATH)/device_framework_matrix.xml \
+    hardware/samsung/vintf/samsung_framework_compatibility_matrix.xml \
     vendor/lineage/config/device_framework_matrix.xml
 DEVICE_MANIFEST_FILE += $(COMMON_PATH)/manifest.xml
 DEVICE_MATRIX_FILE := $(COMMON_PATH)/compatibility_matrix.xml
@@ -141,7 +142,7 @@ TARGET_VENDOR_PROP += $(COMMON_PATH)/vendor.prop
 ## Recovery
 BOARD_INCLUDE_RECOVERY_DTBO := true
 BOARD_USES_FULL_RECOVERY_IMAGE := true
-TARGET_RECOVERY_PIXEL_FORMAT := "ABGR_8888"
+TARGET_RECOVERY_PIXEL_FORMAT := ABGR_8888
 TARGET_RECOVERY_UPDATER_LIBS := librecovery_updater_exynos9820
 
 ## Releasetools
